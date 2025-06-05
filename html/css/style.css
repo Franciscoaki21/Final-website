@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: wheat;
+}
+
+header {
+    background-color: rgb(145, 129, 101);
+    padding: 20px;
+    text-align: center;
+    color:rgb(235, 185, 185);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.recipe {
+    border: 1px solid wheat;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(190, 179, 158);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe:hover {
+    transform: scale(1.05);
+}
+
+.recipe-img {
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.recipe-details {
+    display: none;
+    padding-top: 10px;
+}
+
+.recipe.expanded .recipe-details {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+nav {
+    position: relative;
+}
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: hwb(0 1% 15%);
+        width: 100%;
+        padding: 10px;
+    }
+    .hamburger {
+        display: block;
+    }
+    .nav-links.show {
+    display: flex;
+}
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(138, 120, 83);
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}.about-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgb(204, 150, 50);
+}
+
+.about-container h2 {
+    color: #968f7b;
+    font-size: 28px;
+    text-align: center;
+}
+
+.about-container h3 {
+    color: #968f7b;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.about-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgb(194, 127, 2);
+}
+
+.about-container strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #968f7b;
+    text-align: center;
+}
